@@ -1,0 +1,29 @@
+.App {
+  text-align: center;
+
+  &-buttonStart {
+    background-color: green;
+
+    &:active {
+      background-color: darkgreen;
+    }
+  }
+  &-buttonStop {
+    background-color: red;
+
+    &:active {
+      background-color: darkred;
+    }
+  }
+  &-buttonReset {
+    background-color: yellow;
+
+    &:active {
+      background-color: orange;
+    }
+  }
+}
+
+button {
+  font-size: calc(10px + 2vmin);
+}

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import './App.css';
+import './App.scss';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -7,6 +7,7 @@ function App() {
 
   useEffect(() => {
 
+    // conditional, "isCounting" is set to true by click on start button
     if (isCounting) {
       // executes function setCount every half second to increase state variable "count" by 1
       const interval = setInterval(() => {
@@ -20,12 +21,12 @@ function App() {
 
   return (
     <div className="App">
-      <p>
-        count is: {count}
-      </p>
-      <button onClick={() => setCounting(() => true)}>Start</button>
-      <button onClick={() => setCounting(() => false)}>Stop</button>
-      <button onClick={() => setCount(() => 0)}>Reset</button>
+      <div className="App">
+        {count}
+      </div>
+      <button className="App-buttonStart" onClick={() => setCounting(() => true)}>Start</button>
+      <button className="App-buttonStop" onClick={() => setCounting(() => false)}>Stop</button>
+      <button className="App-buttonReset" onClick={() => setCount(() => 0)}>Reset</button>
     </div>
   )
 }
