@@ -1,6 +1,11 @@
 .App {
   text-align: center;
 
+  &-counter {
+    margin: 40px 0;
+    font-size: 45px;
+  }
+
   &-buttonStart {
     background-color: green;
 
